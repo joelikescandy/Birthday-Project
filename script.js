@@ -6,8 +6,9 @@ let clicks = 0
 myImage.addEventListener("click", function () {
   if (clicks == 0) {
     myImage.src = 'animatedcat.gif'
+  clicks++
   } 
-  clicks++ 
+  
   
   const responses = []
   responses[0] = "Yes";
@@ -19,9 +20,19 @@ myImage.addEventListener("click", function () {
   responses[6] = "Why should I care?"
   responses[7] = "*snores*"
 
-  let item = responses[Math.floor(Math.random()*responses.length)];
-
-
-  document.getElementById("text").innerHTML = item
   
-})
+  
+  let itemsaved = -1 
+    let item = responses[Math.floor(Math.random()*responses.length)];
+
+  while (true) { 
+    if (item == itemsaved) {
+  item = responses[Math.floor(Math.random()*responses.length)];
+      console.log("Duplicate")
+  }  else {
+     document.getElementById("text").innerHTML = item
+      break;
+  }
+              
+  
+}})
