@@ -31,6 +31,7 @@ myImage.addEventListener("click", function () {
       console.log("Duplicate")
   }  else {
      document.getElementById("text").innerHTML = item
+      itemsaved = item
       break;
   }
               
