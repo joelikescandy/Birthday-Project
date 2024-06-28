@@ -1,11 +1,11 @@
 let myImage = new Image(1000, 1000);
-myImage.src = 'shaybirthday2.jpg';
+myImage.src = 'fixedcat.jpg';
 document.body.appendChild(myImage);
 
 let clicks = 0
 myImage.addEventListener("click", function () {
   if (clicks == 0) {
-    myImage.src = 'shaybirthday.gif'
+    myImage.src = 'animatedcat.gif'
   } 
   clicks++ 
   
@@ -19,7 +19,7 @@ myImage.addEventListener("click", function () {
   responses[6] = "Why should I care?"
   responses[7] = "*snores*"
 
-  var item = responses[Math.floor(Math.random()*responses.length)];
+  let item = responses[Math.floor(Math.random()*responses.length)];
 
 
   document.getElementById("text").innerHTML = item
