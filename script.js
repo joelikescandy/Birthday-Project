@@ -9,8 +9,7 @@ myImage.addEventListener("click", function () {
     myImage.src = 'animatedcat.gif'
   clicks++
   } 
-  
-  
+    
   const responses = []
   responses[0] = "Yes";
   responses[1] = "No";
