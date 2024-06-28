@@ -1,6 +1,7 @@
 let myImage = new Image(1000, 1000);
 myImage.src = 'fixedcat.jpg';
 document.body.appendChild(myImage);
+  let itemsaved = -1 
 
 let clicks = 0
 myImage.addEventListener("click", function () {
@@ -22,7 +23,6 @@ myImage.addEventListener("click", function () {
 
   
   
-  let itemsaved = -1 
     let item = responses[Math.floor(Math.random()*responses.length)];
 
   while (true) { 
