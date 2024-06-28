@@ -1,10 +1,15 @@
 let myImage = new Image(1000, 1000);
-myImage.src = 'cat.avif';
+myImage.src = 'shaybirthday2.jpg';
 document.body.appendChild(myImage);
 
-
+let clicks = 0
 myImage.addEventListener("click", function () {
-const responses = []
+  if (clicks == 0) {
+    myImage.src = 'shaybirthday.gif'
+  } 
+  clicks++ 
+  
+  const responses = []
   responses[0] = "Yes";
   responses[1] = "No";
   responses[2] = "Maybe";
@@ -15,7 +20,8 @@ const responses = []
   responses[7] = "*snores*"
 
   var item = responses[Math.floor(Math.random()*responses.length)];
-  
+
 
   document.getElementById("text").innerHTML = item
+  
 })
